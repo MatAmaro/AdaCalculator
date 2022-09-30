@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AdaCalculator
-{ 
-    public class Calculator: ICalculator
+{
+    public class Calculator : ICalculator
     {
         public (string operation, double result) Calculate(string operation, double a, double b)
         {
@@ -15,6 +15,8 @@ namespace AdaCalculator
             switch (operation)
             {
                 case "divide":
+                    if (b == 0)
+                        throw new DivideByZeroException();
                     c = Math.Round(a / b, 2);
                     break;
                 case "multiply":
@@ -27,8 +29,7 @@ namespace AdaCalculator
                     c = a + b;
                     break;
                 default:
-                    c = a + b;
-                    break;
+                    throw new ArgumentException();
             }
             resultOperation = (operation, c);
             return resultOperation;

@@ -1,0 +1,14 @@
+
+.vs/Adac/v17/
+
+*.manifest
+
+.vs/AdaCalculator/v17/
+
+AdaCalculator.Tests/obj/
+
+AdaCalculator/obj/Debug/net6.0/
+
+AdaCalculator/bin/Debug/net6.0/
+
+AdaCalculator.Tests/bin/Debug/net6.0/
